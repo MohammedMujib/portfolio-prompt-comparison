@@ -1,8 +1,10 @@
+import { publicUrl } from "../publicUrl";
+
 /** Local files the visitor can add. Nothing is fetched from the network. */
 export const AUDIO_PATHS = {
-  boot: "/assets/audio/boot.mp3",
-  theme: "/assets/audio/zombies-theme.mp3",
-} as const;
+  boot: publicUrl("/assets/audio/boot.mp3"),
+  theme: publicUrl("/assets/audio/zombies-theme.mp3"),
+};
 
 const PREFS_KEY = "portfolio.v2.audio";
 export const DEFAULT_VOLUME = 0.22;

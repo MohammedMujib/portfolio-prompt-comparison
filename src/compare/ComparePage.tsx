@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import weakPrompt from "../../01-WEAK-PROMPT.txt?raw";
 import strongPrompt from "../../02-STRONG-PROMPT.md?raw";
 import { useLang, type Lang } from "../i18n";
+import { publicUrl } from "../publicUrl";
 import { readStorage, removeStorage, storageKeys, writeStorage, type StorageError } from "../storage";
 import { observations, stages } from "./observations";
 import {
@@ -343,7 +344,7 @@ export function ComparePage() {
             {ui.both}: {preset}px
           </p>
           <div className={stacked ? "compare-links is-stacked" : "compare-links"}>
-            <a href="/version-1">{ui.openV1}</a>
+            <a href={publicUrl("/version-1")}>{ui.openV1}</a>
             <Link to="/version-2">{ui.openV2}</Link>
           </div>
           <div ref={stageRef} className="compare-stage">
@@ -352,8 +353,8 @@ export function ComparePage() {
                 className={stacked ? "compare-pair is-stacked" : "compare-pair"}
                 style={{ width: naturalWidth, transform: `scale(${scale})`, gap }}
               >
-                <iframe title={ui.frameV1} src="/version-1?embed=1" style={{ width: preset, height: frameHeight }} />
-                <iframe title={ui.frameV2} src="/version-2?embed=1" style={{ width: preset, height: frameHeight }} />
+                <iframe title={ui.frameV1} src={publicUrl("/version-1") + "?embed=1"} style={{ width: preset, height: frameHeight }} />
+                <iframe title={ui.frameV2} src={publicUrl("/version-2") + "?embed=1"} style={{ width: preset, height: frameHeight }} />
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@
         } catch (error) {
           lang = "ar";
         }
-        if (location.pathname.indexOf("/version-1") === 0) lang = "ar";
+        if (location.pathname.indexOf("/version-1") !== -1) lang = "ar";
         if (lang !== "en" && lang !== "ar") lang = "ar";
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";

@@ -1,3 +1,5 @@
+import { publicUrl } from "../publicUrl";
+
 /** CV facts for the general prompt. No skill levels, project images, or interview additions. */
 
 export const sections = [
@@ -16,7 +18,7 @@ export const contacts = {
   phoneHref: "tel:+966550872895",
   linkedin: "https://www.linkedin.com/in/mohammed-aldosari-7a5684369",
   github: "https://github.com/MohammedMujib",
-  cv: "/assets/mohammed-aldosari-cv.pdf",
+  cv: publicUrl("/assets/mohammed-aldosari-cv.pdf"),
 };
 
 export const skillGroups = [

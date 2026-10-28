@@ -5,6 +5,7 @@ import { LanguageProvider } from "./i18n";
 import { SiteChrome } from "./shell/SiteChrome";
 import { HomePage } from "./shell/HomePage";
 import { Version1Page } from "./version1/Version1Page";
+import { publicUrl, routerBasename } from "./publicUrl";
 import { primeVersion2Audio, stopVersion2Audio } from "./version2/audioPrime";
 import { Version2Page } from "./version2/Version2Page";
 function Frame() {
@@ -20,9 +21,10 @@ function Frame() {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const anchor = (event.target as Element | null)?.closest?.("a");
       if (!anchor) return;
-      const href = anchor.getAttribute("href");
-      if (!href || !href.startsWith("/")) return;
-      if (href === "/version-2") primeVersion2Audio();
+      const url = new URL(anchor.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      const version2 = new URL(publicUrl("/version-2"), window.location.origin);
+      if (url.pathname === version2.pathname && url.searchParams.get("embed") !== "1") primeVersion2Audio();
       else stopVersion2Audio();
     };
     document.addEventListener("click", onClick, true);
@@ -43,4 +45,4 @@ function Frame() {
     </Routes>
   </div>;
 }
-export function App() { return <LanguageProvider><BrowserRouter><Frame /></BrowserRouter></LanguageProvider>; }
+export function App() { return <LanguageProvider><BrowserRouter basename={routerBasename()}><Frame /></BrowserRouter></LanguageProvider>; }

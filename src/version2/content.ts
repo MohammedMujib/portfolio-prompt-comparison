@@ -1,4 +1,5 @@
 import type { Lang } from "../i18n";
+import { publicUrl } from "../publicUrl";
 
 export type FilterId = "all" | "data" | "timeseries" | "systems";
 export type ProjectFilter = Exclude<FilterId, "all">;
@@ -421,7 +422,7 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: "/assets/real-estate-overview.png",
+        src: publicUrl("/assets/real-estate-overview.png"),
         width: 1276,
         height: 850,
         alt: {
@@ -430,7 +431,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/assets/real-estate-geography.png",
+        src: publicUrl("/assets/real-estate-geography.png"),
         width: 1267,
         height: 849,
         alt: {
@@ -439,7 +440,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/assets/real-estate-statistics.png",
+        src: publicUrl("/assets/real-estate-statistics.png"),
         width: 1285,
         height: 850,
         alt: {
@@ -494,7 +495,7 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: "/assets/oil-original-series.png",
+        src: publicUrl("/assets/oil-original-series.png"),
         width: 1600,
         height: 652,
         alt: {
@@ -503,7 +504,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/assets/oil-seasonal-decomposition.png",
+        src: publicUrl("/assets/oil-seasonal-decomposition.png"),
         width: 1600,
         height: 560,
         alt: {
@@ -512,7 +513,7 @@ export const projects: Project[] = [
         },
       },
       {
-        src: "/assets/oil-predictions.png",
+        src: publicUrl("/assets/oil-predictions.png"),
         width: 1600,
         height: 584,
         alt: {
@@ -521,7 +522,7 @@ export const projects: Project[] = [
         },
       },
     ],
-    download: { href: "/assets/saudi-oil-project.pdf" },
+    download: { href: publicUrl("/assets/saudi-oil-project.pdf") },
     illustration: false,
   },
   {
@@ -560,7 +561,7 @@ export const projects: Project[] = [
     ],
     images: [
       {
-        src: "/assets/ecommerce-dashboard.png",
+        src: publicUrl("/assets/ecommerce-dashboard.png"),
         width: 1425,
         height: 792,
         alt: {
@@ -743,5 +744,5 @@ export const contacts = {
   phoneHref: "tel:+966550872895",
   linkedin: "https://www.linkedin.com/in/mohammed-aldosari-7a5684369",
   github: "https://github.com/MohammedMujib",
-  cv: "/assets/mohammed-aldosari-cv.pdf",
+  cv: publicUrl("/assets/mohammed-aldosari-cv.pdf"),
 };

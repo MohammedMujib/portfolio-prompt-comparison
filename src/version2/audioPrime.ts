@@ -1,3 +1,5 @@
+import { publicUrl } from "../publicUrl";
+
 /** One boot track and one theme track, started from the Version 2 click. */
 export type PrimeResult = "playing" | "blocked";
 
@@ -53,8 +55,8 @@ export function stopVersion2Audio() {
 export function primeVersion2Audio() {
   stopVersion2Audio();
   const volume = readVolume();
-  const boot = new Audio("/local-strong/assets/ps3-startup.mp3");
-  const theme = new Audio("/local-strong/assets/zombies-theme.mp3");
+  const boot = new Audio(publicUrl("/local-strong/assets/ps3-startup.mp3"));
+  const theme = new Audio(publicUrl("/local-strong/assets/zombies-theme.mp3"));
   boot.preload = "auto";
   theme.preload = "auto";
   boot.loop = false;
