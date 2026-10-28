@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b0d">
+<title>محمد الدوسري | خريج علوم الحاسب</title>
+<meta name="description" content="محمد الدوسري، خريج علوم الحاسب.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/zombies-background.webp" as="image">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+<div class="world" aria-hidden="true"><div class="world-image"></div><div class="world-shade"></div><div class="fog fog-one"></div><div class="fog fog-two"></div><canvas id="embers"></canvas><div class="grain"></div></div>
+<header class="topbar">
+ <button class="brand" data-page="home" aria-label="الصفحة الرئيسية"><span class="monogram">MA<span>Ⅱ</span></span><span class="brand-text">MOHAMMED ALDOSARI<small data-i18n="portfolio">الموقع الشخصي</small></span></button>
+ <div class="top-right"><span class="location"><i></i><span data-i18n="location">الرياض، المملكة العربية السعودية</span></span><button id="language" class="language" aria-label="Switch to English"><span class="lang-option" data-lang-option="en">EN</span><span class="lang-sep" aria-hidden="true">/</span><span class="lang-option is-active" data-lang-option="ar">AR</span></button></div>
+</header>
+<main id="main" tabindex="-1">
+ <section id="home" class="screen home-screen" aria-labelledby="home-heading">
+  <div class="hero-copy">
+   <div class="eyebrow"><span class="tiny-line"></span><span data-i18n="welcome">WELCOME TO MY WORLD</span></div>
+   <h1 id="home-heading" dir="ltr">MOHAMMED<br><span>ALDOSARI</span><b>Ⅱ</b></h1>
+   <div class="arabic-name" lang="ar">محمد الدوسري</div>
+   <div class="hero-role"><p data-i18n="graduate">خريج علوم الحاسب</p></div>
+   <nav class="main-menu" aria-label="أقسام الموقع">
+    <button data-page="profile"><span class="menu-arrow">›</span><span data-i18n="profile">نبذة عني</span><small>01</small></button>
+    <button data-page="projects"><span class="menu-arrow">›</span><span data-i18n="projects">المشاريع</span><small>02</small></button>
+    <button data-page="skills"><span class="menu-arrow">›</span><span data-i18n="skills">المهارات</span><small>03</small></button>
+    <button data-page="contact"><span class="menu-arrow">›</span><span data-i18n="contact">لنتواصل</span><small>04</small></button>
+   </nav>
+  </div>
+  <aside class="hero-note"><span class="coordinate">24°42′ N &nbsp; 46°40′ E</span><div class="note-line"></div><p data-i18n="motto">شغف. مثابرة.<br>تطوّر مستمر.</p><span class="note-label" data-i18n="enter-world">استكشف عالمي</span></aside>
+  <div class="home-index"><span>01</span> / 05</div>
+ </section>
+ <section id="profile" class="screen panel-screen" hidden aria-labelledby="profile-title">
+  <div class="panel-heading"><div><span class="eyebrow">01 / PLAYER PROFILE</span><h2 id="profile-title" data-i18n="profile">نبذة عني</h2></div><button class="back" data-page="home" data-i18n="back">العودة للقائمة ↗</button></div>
+  <div class="profile-grid">
+   <div class="profile-intro"><span class="section-tag" data-i18n="about-tag">ما وراء الأرقام</span><h3 data-i18n="about-heading">أبحث عن القصة<br>داخل البيانات.</h3><p data-i18n="bio">أنا محمد الدوسري، خريج علوم الحاسب. أستخدم Python وSQL وPower BI لاستكشاف البيانات وبناء تقارير تساعد على فهمها. أؤمن بالتعلّم المستمر، وتحويل التحديات إلى فرص للتطوّر.</p><div class="traits"><span data-i18n="trait1">مثابر</span><span data-i18n="trait2">شغوف</span><span data-i18n="trait3">أطمح للتطوّر الدائم</span></div><a class="button primary" href="assets/mohammed-aldosari-cv.pdf" download data-i18n="download">تحميل السيرة الذاتية ↓</a></div>
+   <div class="timeline"><article><span class="timeline-dot"></span><span class="section-tag">2021 — 2025</span><h4 data-i18n="degree">بكالوريوس علوم الحاسب</h4><p data-i18n="university">جامعة الأمير سطام بن عبدالعزيز</p></article><article><span class="timeline-dot"></span><span class="section-tag" data-i18n="training-date">يونيو — أغسطس 2025</span><h4 data-i18n="training">تدريب تعاوني — بلدية الأفلاج</h4><p data-i18n="training-body">تجربة عززت تحمّل المسؤولية والتعلّم الذاتي وإنجاز المهام تحت ضغط الوقت.</p></article><article><span class="timeline-dot"></span><span class="section-tag" data-i18n="languages">اللغات</span><h4 data-i18n="bilingual">العربية والإنجليزية</h4><p data-i18n="location">الرياض، المملكة العربية السعودية</p></article></div>
+  </div>
+  <details class="courses"><summary><span data-i18n="courses">الدورات والتعلّم المستمر</span><span>+</span></summary><div id="course-list"></div></details>
+ </section>
+ <section id="projects" class="screen panel-screen" hidden aria-labelledby="projects-title">
+  <div class="panel-heading"><div><span class="eyebrow">02 / SELECT A PROJECT</span><h2 id="projects-title" data-i18n="projects">المشاريع</h2></div><button class="back" data-page="home" data-i18n="back">العودة للقائمة ↗</button></div>
+  <p class="section-lead" data-i18n="projects-lead">من البيانات الخام إلى رؤية أوضح. اختر مشروعًا لاستكشاف تفاصيله.</p>
+  <div class="project-grid" id="project-grid"></div>
+ </section>
+ <section id="skills" class="screen panel-screen" hidden aria-labelledby="skills-title">
+  <div class="panel-heading"><div><span class="eyebrow">03 / SKILL LOADOUT</span><h2 id="skills-title" data-i18n="skills">المهارات</h2></div><button class="back" data-page="home" data-i18n="back">العودة للقائمة ↗</button></div>
+  <p class="section-lead" data-i18n="skills-lead">أدوات أستخدمها لفهم البيانات، حل المشكلات وبناء الأفكار.</p><div class="skill-grid" id="skill-grid"></div>
+  <div class="soft-skills"><span class="section-tag" data-i18n="beyond-tools">أبعد من الأدوات</span><div class="soft-grid" id="soft-grid"></div></div>
+ </section>
+ <section id="contact" class="screen panel-screen" hidden aria-labelledby="contact-title">
+  <div class="panel-heading"><div><span class="eyebrow">04 / MAKE CONTACT</span><h2 id="contact-title" data-i18n="contact">لنتواصل</h2></div><button class="back" data-page="home" data-i18n="back">العودة للقائمة ↗</button></div>
+  <div class="contact-grid"><div><span class="section-tag" data-i18n="next-chapter">الفصل القادم يبدأ بمحادثة</span><h3 class="contact-headline" data-i18n="contact-heading">لنصنع شيئًا<br>يستحق الاهتمام.</h3><a class="button primary" href="assets/mohammed-aldosari-cv.pdf" download data-i18n="download">تحميل السيرة الذاتية ↓</a></div><div class="contact-links"><a href="mailto:alajaleenmohammed0@gmail.com"><span data-i18n="email">البريد الإلكتروني</span><strong dir="ltr">alajaleenmohammed0@gmail.com</strong><b>↗</b></a><a href="tel:+966550872895"><span data-i18n="phone">الهاتف</span><strong dir="ltr">+966 55 087 2895</strong><b>↗</b></a><div id="social-links"></div><div class="contact-place"><i></i><span data-i18n="location">الرياض، المملكة العربية السعودية</span></div></div></div>
+ </section>
+</main>
+<footer class="bottom-bar"><div class="footer-nav"><span class="status-light"></span><span data-i18n="footer">محمد الدوسري · خريج علوم الحاسب</span><button id="replay" data-i18n="replay">إعادة المقدمة</button></div><div class="audio-controls"><button id="sound-toggle" aria-label="تشغيل الصوت" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-waves" d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg><span id="sound-label">الصوت متوقف</span></button><input id="volume" type="range" min="0" max="1" step="0.01" value="0.35" aria-label="مستوى الصوت"><button id="motion-toggle" aria-pressed="true" data-i18n="motion">الحركة</button></div></footer>
+<div id="entry" class="entry-overlay" hidden><div class="entry-content"><div class="entry-kicker">MOHAMMED ALDOSARI <span>Ⅱ</span></div><div class="eyebrow">PERSONAL PORTFOLIO / CINEMATIC EXPERIENCE</div><h2 data-i18n="entry-title">أهلًا بك في عالمي.</h2><p data-i18n="entry-body">رحلة تبدأ بصوت مألوف، وتأخذك إلى عالم من البيانات.</p><button id="start-sound" class="button primary"><span class="play-icon">▷</span><span data-i18n="start">ابدأ التجربة مع الصوت</span></button><button id="start-silent" class="silent-button" data-i18n="silent">الدخول بدون صوت</button><span class="entry-foot" data-i18n="entry-foot">مقدمة قصيرة · يمكنك تجاوزها في أي وقت</span></div></div>
+<div id="boot" class="boot-overlay" hidden><div class="boot-glow"></div><svg class="boot-waves" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="wave"><stop stop-color="#66718a" stop-opacity="0"/><stop offset=".5" stop-color="#b5bed5" stop-opacity=".65"/><stop offset="1" stop-color="#66718a" stop-opacity="0"/></linearGradient></defs><g fill="none" stroke="url(#wave)"><path d="M-100 340 Q230 170 580 320 T1540 290"/><path d="M-100 345 Q230 180 580 325 T1540 300"/><path d="M-100 350 Q230 190 580 330 T1540 310"/><path d="M-100 355 Q230 200 580 335 T1540 320"/><path d="M-100 360 Q230 210 580 340 T1540 330"/><path d="M-100 365 Q230 220 580 345 T1540 340"/><path d="M-100 370 Q230 230 580 350 T1540 350"/></g></svg><div class="boot-logo"><div>PS3</div><span>PlayStation 3</span></div><div class="boot-owner">MOHAMMED ALDOSARI<small>PERSONAL PORTFOLIO / INITIALIZING</small></div><button id="resume-audio" type="button" hidden data-i18n="resume">اضغط لتشغيل صوت المقدمة</button><button id="skip-boot" data-i18n="skip">تجاوز المقدمة ↗</button><div class="boot-progress"><i></i></div></div>
+<dialog id="project-dialog"><button id="close-dialog" class="close-dialog" aria-label="إغلاق">×</button><div id="project-detail"></div></dialog>
+<div id="toast" class="toast" role="status"></div>
+<audio id="boot-audio" src="assets/ps3-startup.mp3" preload="none"></audio><audio id="theme-audio" src="assets/zombies-theme.mp3" preload="none" loop></audio>
+<script src="app.js"></script>
+</body></html>
